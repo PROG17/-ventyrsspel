@@ -26,3 +26,10 @@ C:\Users\Kalle\source\repos\AdventureGame4\AdventureGame2\AdventureGame\obj\Debu
 C:\Users\Kalle\source\repos\AdventureGame4\AdventureGame2\AdventureGame\obj\Debug\AdventureGame.csproj.CoreCompileInputs.cache
 C:\Users\Kalle\source\repos\AdventureGame4\AdventureGame2\AdventureGame\obj\Debug\AdventureGame.exe
 C:\Users\Kalle\source\repos\AdventureGame4\AdventureGame2\AdventureGame\obj\Debug\AdventureGame.pdb
+C:\Users\Kalle\source\repos\-ventyrsspel\bin\Debug\AdventureGame.exe.config
+C:\Users\Kalle\source\repos\-ventyrsspel\bin\Debug\AdventureGame.exe
+C:\Users\Kalle\source\repos\-ventyrsspel\bin\Debug\AdventureGame.pdb
+C:\Users\Kalle\source\repos\-ventyrsspel\obj\Debug\AdventureGame.csprojResolveAssemblyReference.cache
+C:\Users\Kalle\source\repos\-ventyrsspel\obj\Debug\AdventureGame.csproj.CoreCompileInputs.cache
+C:\Users\Kalle\source\repos\-ventyrsspel\obj\Debug\AdventureGame.exe
+C:\Users\Kalle\source\repos\-ventyrsspel\obj\Debug\AdventureGame.pdb

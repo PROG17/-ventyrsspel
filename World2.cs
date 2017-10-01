@@ -153,6 +153,8 @@ namespace AdventureGame
                    Use(currentRoom, player, ToUpperCommand);
                 }
                 // "Use" // use key on door, use gasoline on chainsaw (chainsaw is empty) => chainsaw (chainsaw is filled up with 
+                else if ((ToUpperCommand[0] == "LOOK") && (ToUpperCommand.Length == 1))
+                    currentRoom.PrintDescription();
                 else if (ToUpperCommand[0] == "LOOK") // Om man väljer "LOOK"
                 {
                     Look(currentRoom, player, ToUpperCommand[1]);
