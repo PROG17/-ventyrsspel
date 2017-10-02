@@ -127,28 +127,28 @@ namespace AdventureGame
                 string[] ToUpperCommand = MyToUpper(str); // Gör om till stora bokstäver
                                
 
-                if (ToUpperCommand[0] == "GO") // om man väljer "Go"........
+                if (ToUpperCommand[0] == "GO" && ToUpperCommand.Length > 1) // om man väljer "Go"........
                 {
                     currentRoom = Go(currentRoom, ToUpperCommand[1]); 
                 }
-                else if (ToUpperCommand[0] == "TAKE") // om man väljer "TAKE"
+                else if (ToUpperCommand[0] == "TAKE" && ToUpperCommand.Length > 1) // om man väljer "TAKE"
                 {
                     Take(currentRoom, player, ToUpperCommand[1]);
                 }
-                else if (ToUpperCommand[0] == "DROP") // om man väljer "DROP"........
+                else if (ToUpperCommand[0] == "DROP" && ToUpperCommand.Length > 1) // om man väljer "DROP"........
                 {
                     Drop(currentRoom, player, ToUpperCommand[1]);
                 }
-                else if (ToUpperCommand[0] == "OPEN") // om man väljer "OPEN"    
+                else if (ToUpperCommand[0] == "OPEN" && ToUpperCommand.Length > 1) // om man väljer "OPEN"    
                 {
                     Open(currentRoom, ToUpperCommand[1]);
                 }
-                else if (ToUpperCommand[0] == "CLOSE") // om man väljer "CLOSE"    
+                else if (ToUpperCommand[0] == "CLOSE" && ToUpperCommand.Length > 1) // om man väljer "CLOSE"    
                 {
                     Close(currentRoom, ToUpperCommand[1]);
                 }
                 
-                else if (ToUpperCommand[0] == "USE") // om man väljer "USE"    
+                else if (ToUpperCommand[0] == "USE" && ToUpperCommand.Length > 1) // om man väljer "USE"    
                 {
                    Use(currentRoom, player, ToUpperCommand);
                 }
@@ -172,17 +172,22 @@ namespace AdventureGame
                    Console.WriteLine("I don't understand."); // Skrivs ut om man inte skriver något av kommandon enum AllowableCommands listan som definnieras i program.cs
                    Console.WriteLine("Try: {0}", string.Join(", ", Enum.GetNames(typeof(AllowableCommands))) + ", or QUIT");
                 }
+                if (currentRoom == deathroom)
+                {
+                    Console.WriteLine("You fell down a hole in the floor and died!");
+                    Console.WriteLine("Thank you for trying!! See you next time!!");
+                    keepPlaying = false;
+
+                }
+                if (currentRoom == finishroom)
+                {
+                    Console.WriteLine("You managed to use the chainsaw to open the wooden door.");
+                    Console.WriteLine("You won! and are free to leave the this awful place.");
+                    keepPlaying = false;
+
+                }
             }
-            if (currentRoom == deathroom)
-            {
-                Console.WriteLine("You fell down a hole in the floor and died!");
-                Console.WriteLine("Thank you for trying!! See you next time!!");
-            }
-            if (currentRoom == finishroom)
-            {
-                Console.WriteLine("You managed to use the chainsaw to open the wooden door.");
-                Console.WriteLine("You won! and are free to leave the this awful place.");
-            }
+            
 
         }
 
